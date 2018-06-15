@@ -151,7 +151,7 @@ $ wc *.pdb
 > Help Sam by filling in the blanks.
 >
 > > ## Solution
-> > Ready? Let's discuss your solution in the class.
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -279,7 +279,7 @@ Now let's use the `sort` command to sort its contents.
 > Explain why `-n` has this effect.
 >
 > > ## Solution
-> > The `-n` flag specifies a numeric sort, rather than alphabetical.
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -363,12 +363,7 @@ the output of `head` must be the file with the fewest lines.
 >
 > Hint: Try executing each command twice in a row and then examining the output files.
 > > ## Solution
-> > In the first example with `>`, the string "hello" is written to `testfile01.txt`,
-> > but the file gets overwritten each time we run the command.
-> >
-> > We see from the second example that the `>>` operator also writes "hello" to a file
-> > (in this case`testfile02.txt`),
-> > but appends the string to the file if it already exists (i.e. when we run it for the second time).
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -393,10 +388,7 @@ the output of `head` must be the file with the fewest lines.
 > 4. The second and third lines of `animals.txt`
 >
 > > ## Solution
-> > Option 3 is correct.
-> > For option 1 to be correct we would only run the `head` command.
-> > For option 2 to be correct we would only run the `tail` command.
-> > For option 4 to be correct we would have to pipe the output of `head` into `tail -2` by doing `head -3 animals.txt | tail -2 >> animalsUpd.txt`
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -474,11 +466,7 @@ the calculation is "head of sort of line count of `*.pdb`".
 > 4. `wc -l * | sort -n | head -n 3`
 >
 > > ## Solution
-> > Option 4 is the solution.
-> > The pipe character `|` is used to feed the standard output from one process to
-> > the standard input of another.
-> > `>` is used to redirect standard output to a file.
-> > Try it in the `data-shell/molecules` directory!
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -574,32 +562,8 @@ so that you and other people can put those programs into pipes to multiply their
 > ~~~
 > {: .language-bash}
 >
-> > ## Solution
-> > `<` is used to redirect input to a command.
-> >
-> > In both examples, the shell returns the number of lines from the input to
-> > the `wc` command.
-> > In the first example, the input is the file `notes.txt` and the file name is
-> > given in the output from the `wc` command.
-> > In the second example, the contents of the file `notes.txt` are redirected to
-> > standard input.
-> > It is as if we have entered the contents of the file by typing at the prompt.
-> > Hence the file name is not given in the output - just the number of lines.
-> > Try this for yourself:
-> >
-> > ```
-> > $ wc -l
-> > this
-> > is
-> > a test
-> > Ctrl-D # This lets the shell know you have finished typing the input
-> > ```
-> > {: .language-bash}
-> >
-> > ```
-> > 3
-> > ```
-> > {: .output}
+>> > ## Solution
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -633,10 +597,7 @@ so that you and other people can put those programs into pipes to multiply their
 > you combine with it in a pipe to remove all duplicated lines?
 >
 > > ## Solution
-> > ```
-> > $ sort salmon.txt | uniq
-> > ```
-> > {: .language-bash}
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -664,18 +625,7 @@ so that you and other people can put those programs into pipes to multiply their
 > {: .language-bash}
 > Hint: build the pipeline up one command at a time to test your understanding
 > > ## Solution
-> > The `head` command extracts the first 5 lines from `animals.txt`.
-> > Then, the last 3 lines are extracted from the previous 5 by using the `tail` command.
-> > With the `sort -r` command those 3 lines are sorted in reverse alphabetical order and finally,
-> > the output is redirected to a file `final.txt`.
-> > The content of this file can be checked by executing `cat final.txt`.
-> > The file should contain the following lines:
-> > ```
-> > 2012-11-06,rabbit
-> > 2012-11-06,deer
-> > 2012-11-05,raccoon
-> > ```
-> > {: .source}
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -708,10 +658,7 @@ so that you and other people can put those programs into pipes to multiply their
 > names)?
 >
 > > ## Solution
-> > ```
-> > $ cut -d , -f 2 animals.txt | sort | uniq
-> > ```
-> > {: .language-bash}
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -740,9 +687,7 @@ so that you and other people can put those programs into pipes to multiply their
 > 6.  `cut -d, -f 2 animals.txt | sort | uniq -c | wc -l`
 >
 > > ## Solution
-> > Option 5. is the correct answer.
-> > If you have difficulty understanding why, try running the commands, or sub-sections of
-> > the pipelines (make sure you are in the `data-shell/data` directory).
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -860,16 +805,7 @@ so this matches all the valid data files she has.
 >     where the original one would not?
 >
 > > ## Solution
-> > 1.
-> >
-> > 	```
-> > 	$ ls *A.txt
-> > 	$ ls *B.txt
-> > 	```
-> >	{: .language-bash}
-> > 2. The output from the new commands is separated because there are two commands.
-> > 3. When there are no files ending in `A.txt`, or there are no files ending in
-> > `B.txt`.
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -887,12 +823,6 @@ so this matches all the valid data files she has.
 > 4. `rm *.*`
 >
 > > ## Solution
-> > 1. This would remove `.txt` files with one-character names
-> > 2. This is correct answer
-> > 3. The shell would expand `*` to match everything in the current directory,
-> > so the command would try to remove all matched files and an additional
-> > file called `.txt`
-> > 4. The shell would expand `*.*` to match all files with any extension,
-> > so this command would delete all files
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
