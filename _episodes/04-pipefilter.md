@@ -151,12 +151,7 @@ $ wc *.pdb
 > Help Sam by filling in the blanks.
 >
 > > ## Solution
-> > ```
-> > $ cp *calibration.txt /backup/calibration
-> > $ cp 2015-11-* ~/send_to_bob/all_november_files/
-> > $ cp *-23-dataset* ~send_to_bob/all_datasets_created_on_a_23rd/
-> > ```
-> > {: .language-bash}
+> > Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
