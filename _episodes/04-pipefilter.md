@@ -26,7 +26,7 @@ keypoints:
 Now that we know a few basic commands,
 we can finally look at the shell's most powerful feature:
 the ease with which it lets us combine existing programs in new ways.
-We'll start with a directory called `molecules`
+Go into the data-shell directory and then we'll start with a directory called `molecules`
 that contains six files describing some simple organic molecules.
 The `.pdb` extension indicates that these files are in Protein Data Bank format,
 a simple text format that specifies the type and position of each atom in the molecule.
@@ -111,15 +111,7 @@ $ wc *.pdb
 > 4. `ls ethane.*`
 >
 > > ## Solution
->>  The solution is `3.`
->>
->> `1.` shows all files whose names contain zero or more characters (`*`) followed by the letter `t`, then zero or more characters (`*`) followed by `ane.pdb`. This gives `ethane.pdb  methane.pdb  octane.pdb  pentane.pdb`. 
->>
->> `2.` shows all files whose names start with zero or more characters (`*`) followed by the letter `t`, then a single character (`?`), then `ne.` followed by zero or more characters (`*`). This will give us `octane.pdb` and `pentane.pdb` but doesn't match anything which ends in `thane.pdb`.
->>
->> `3.` fixes the problems of option 2 by matching two characters (`??`) between `t` and `ne`. This is the solution.
->>
->> `4.` only shows files starting with `ethane.`.
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
@@ -406,7 +398,7 @@ the output of `head` must be the file with the fewest lines.
 > 4. The second and third lines of `animals.txt`
 >
 > > ## Solution
-> > Option 3 is correct. 
+> > Option 3 is correct.
 > > For option 1 to be correct we would only run the `head` command.
 > > For option 2 to be correct we would only run the `tail` command.
 > > For option 4 to be correct we would have to pipe the output of `head` into `tail -2` by doing `head -3 animals.txt | tail -2 >> animalsUpd.txt`
@@ -504,8 +496,8 @@ most Unix programmers call it "stdin").
 Every process also has a default output channel called **standard output**
 (or "stdout"). A second output channel called **standard error** (stderr) also
 exists. This channel is typically used for error or diagnostic messages, and it
-allows a user to pipe the output of one program into another while still receiving 
-error messages in the terminal. 
+allows a user to pipe the output of one program into another while still receiving
+error messages in the terminal.
 
 The shell is actually just another program.
 Under normal circumstances,
@@ -588,7 +580,7 @@ so that you and other people can put those programs into pipes to multiply their
 > {: .language-bash}
 >
 > > ## Solution
-> > `<` is used to redirect input to a command. 
+> > `<` is used to redirect input to a command.
 > >
 > > In both examples, the shell returns the number of lines from the input to
 > > the `wc` command.
@@ -700,7 +692,7 @@ so that you and other people can put those programs into pipes to multiply their
 > $ cut -d , -f 2 animals.txt
 > ~~~
 > {: .language-bash}
-> 
+>
 > uses the -d flag to separate each line by comma, and the -f flag
 > to print the second field in each line, to give the following output:
 >
@@ -873,7 +865,7 @@ so this matches all the valid data files she has.
 >     where the original one would not?
 >
 > > ## Solution
-> > 1. 
+> > 1.
 > >
 > > 	```
 > > 	$ ls *A.txt
