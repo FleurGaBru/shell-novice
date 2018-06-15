@@ -32,8 +32,7 @@ we will use a file that contains three haikus taken from a
 we're going to be working in the writing subdirectory:
 
 ~~~
-$ cd
-$ cd Desktop/data-shell/writing
+$ cd ~/data-shell/writing
 $ cat haiku.txt
 ~~~
 {: .language-bash}
@@ -280,8 +279,8 @@ Miscellaneous:
 
 > ## Tracking a Species
 >
-> Leah has several hundred
-> data files saved in one directory, each of which is formatted like this:
+> Leah has a
+> data file, which is formatted like this:
 >
 > ~~~
 > 2013-11-05,deer,5
@@ -291,9 +290,9 @@ Miscellaneous:
 > 2013-11-06,deer,2
 > ~~~
 > {: .source}
+> An example of such a file is provided in `data-shell/data/animal-counts/animals.txt`
 >
-> She wants to write a shell script that takes a species as the first command-line argument
-> and a directory as the second argument. The script should return one file called `species.txt`
+> She wants to write a command that should return one file called `species.txt`
 > containing a list of dates and the number of that species seen on each date.
 > For example using the data shown above, `rabbit.txt` would contain:
 >
@@ -303,23 +302,22 @@ Miscellaneous:
 > ~~~
 > {: .source}
 >
-> Put these commands and pipes in the right order to achieve this:
+> Put these commands and pipes in the right order to achieve this for the species "deer":
 >
 > ~~~
 > cut -d : -f 2  
-> >  
+> >
+> cat animals.txt  
 > |  
-> grep -w $1 -r $2  
+> grep -w deer  
 > |  
-> $1.txt  
+> deer.txt  
 > cut -d , -f 1,3  
 > ~~~
 > {: .language-bash}
 >
-> Hint: use `man grep` to look for how to grep text recursively in a directory
-> and `man cut` to select more than one field in a line.
+> Hint: use `man cut` to select more than one field in a line.
 >
-> An example of such a file is provided in `data-shell/data/animal-counts/animals.txt`
 >
 > > ## Solution
 >>  Ready? Let's discuss your solution in the class.
@@ -334,7 +332,7 @@ Miscellaneous:
 > most mentioned.  You, however, are certain it was Amy.  Luckily, you
 > have a file `LittleWomen.txt` containing the full text of the novel
 > (`data-shell/writing/data/LittleWomen.txt`).
-> Using a `for` loop, how would you tabulate the number of times each
+> How would you tabulate the number of times each
 > of the four sisters is mentioned?
 >
 > Hint: one solution might employ
@@ -344,29 +342,8 @@ Miscellaneous:
 > particular solution is usually chosen based on a combination of
 > yielding the correct result, elegance, readability, and speed.
 >
-> > ## Solutions
-> > ```
-> > for sis in Jo Meg Beth Amy
-> > do
-> > 	echo $sis:
-> >	grep -ow $sis LittleWomen.txt | wc -l
-> > done
-> > ```
-> > {: .source}
-> >
-> > Alternative, slightly inferior solution:
-> > ```
-> > for sis in Jo Meg Beth Amy
-> > do
-> > 	echo $sis:
-> >	grep -ocw $sis LittleWomen.txt
-> > done
-> > ```
-> > {: .source}
-> >
-> > This solution is inferior because `grep -c` only reports the number of lines matched.
-> > The total number of matches reported by this method will be lower if there is more
-> > than one match per line.
+> > ## Solution
+>>  Ready? Let's discuss your solution in the class.
 > {: .solution}
 {: .challenge}
 
